@@ -1,7 +1,13 @@
 
 # Issue CWE Extractor
 
-This Python script extracts issue IDs and CWE IDs from a JSON file based on the source file name provided.
+This Python script extracts issue IDs and CWE IDs from a Veracode Static Scan JSON results file based on the source file name provided.
+
+These values can then be used with (Veracode Fix)[https://docs.veracode.com/r/veracode_fix] to auto apply a remediation to the source file supplied using a command like:
+
+```
+./veracode fix my_java_application/commands/IgnoreCommand.java --results my_results/results.json --issue-id 1234 --apply
+```
 
 ## Prerequisites
 
