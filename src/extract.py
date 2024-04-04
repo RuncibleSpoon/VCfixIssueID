@@ -1,7 +1,9 @@
 import json
 import sys
+import os
 
 def extract_issue_cwe(json_file, source_file):
+    json_file = os.path.abspath(json_file)  # Validate and sanitize the json_file path
     with open(json_file, 'r') as f:
         data = json.load(f)
 
