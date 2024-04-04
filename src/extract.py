@@ -10,7 +10,7 @@ def extract_issue_cwe(json_file, source_file):
     # Extracting issue_id and cwe_id based on source_file
     pairs = []
     for finding in data["findings"]:
-        if finding["files"]["source_file"]["file"] == source_file:
+        if os.path.basename(finding["files"]["source_file"]["file"]) == source_file:
             issue_id = finding["issue_id"]
             cwe_id = finding["cwe_id"]
             pairs.append((issue_id, cwe_id))
