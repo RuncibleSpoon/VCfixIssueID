@@ -30,7 +30,7 @@ python extract.py data.json "ToolsController.java"
 
 ## Output
 
-The script will output pairs of (source_file, issue_id, cwe_id) if findings are available for the specified source file. If no findings are available, it will display "No findings for the specified source_file."
+The script will output pairs of (issue_id, cwe_id) if findings are available for the specified source file. If no findings are available, it will display "No findings for the specified source_file."
 
 ## License
 
