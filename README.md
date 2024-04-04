@@ -1,4 +1,4 @@
-```markdown
+
 # Issue CWE Extractor
 
 This Python script extracts issue IDs and CWE IDs from a JSON file based on the source file name provided.
