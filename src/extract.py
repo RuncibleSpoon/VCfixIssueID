@@ -2,11 +2,13 @@ import json
 import sys
 import os
 
+# Script to find all the Issue ID's and CWE's for a given source file
+
 def extract_issue_cwe(json_file, source_file):
     json_file = os.path.abspath(json_file)  # Validate and sanitize the json_file path
     with open(json_file, 'r') as f:
         data = json.load(f)
-
+    
     # Extracting issue_id and cwe_id based on source_file
     pairs = []
     for finding in data["findings"]:
